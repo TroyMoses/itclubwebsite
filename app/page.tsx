@@ -51,14 +51,14 @@ export default function HomePage() {
               height={32}
               className="h-8 w-16"
             /> */}
-            <span className="text-2xl font-medium">
+            <span className="text-2xl">
               IT - CLUB BUGEMA MAIN CAMPUS
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link
               href="/"
-              className="text-lg font-semibold border-b-2 border-primary"
+              className="text-lg border-b-2 border-green-700"
             >
               Home
             </Link>
@@ -74,7 +74,7 @@ export default function HomePage() {
             <Link href="/blogs" className="text-lg font-normal">
               Blogs
             </Link>
-            <Button>Join Us</Button>
+            <Button variant="default">Join Us</Button>
           </nav>
         </div>
       </header>
@@ -94,7 +94,9 @@ export default function HomePage() {
                   and start connecting!
                 </p>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                  <Button size="lg">Get Started</Button>
+                  <Button variant="default" size="lg">
+                    Get Started
+                  </Button>
                   <Button size="lg" variant="outline">
                     Learn More
                   </Button>
