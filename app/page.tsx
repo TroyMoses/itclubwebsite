@@ -81,7 +81,7 @@ export default function HomePage() {
 
       <main className="flex-1 ">
         {/* Hero Section */}
-        <section className="bg-blue-50 pt-10 pb-20 px-10">
+        <section className=" pt-10 pb-20 px-10">
           <div className="container">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
@@ -120,7 +120,7 @@ export default function HomePage() {
               About the communities
             </h2>
             <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="bg-pink-50 border-none">
+              <Card className=" border-none">
                 <CardHeader>
                   <Users className="h-12 w-12 text-pink-500" />
                   <CardTitle>Google Developer Groups</CardTitle>
@@ -133,7 +133,7 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-green-50 border-none">
+              <Card className=" border-none">
                 <CardHeader>
                   <Globe className="h-12 w-12 text-green-500" />
                   <CardTitle>Google Developer Groups on Campus</CardTitle>
@@ -150,7 +150,7 @@ export default function HomePage() {
         </section>
 
         {/* Programs Section */}
-        <section className="py-20 bg-gray-50 px-10">
+        <section className="py-20  px-10">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
               Additional communities and programs
