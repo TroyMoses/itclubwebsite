@@ -1,11 +1,17 @@
-import { Search } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { Badge } from "@/components/ui/badge"
+import { Search } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Badge } from "@/components/ui/badge";
 
 export default function BlogPage() {
   return (
@@ -25,7 +31,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div> */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
+      <header className="sticky top-0 z-50 w-full border-b bg-green-700 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             {/* <Image
@@ -40,9 +46,7 @@ export default function BlogPage() {
               placeholder="Search all articles..."
               className="pl-10 w-full md:max-w-xl"
             />
-            <Button className="">
-              Search
-            </Button>
+            <Button className="">Search</Button>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-lg font-normal">
@@ -57,10 +61,13 @@ export default function BlogPage() {
             <Link href="#" className="text-lg font-normal">
               Team
             </Link>
-            <Link href="/blogs" className="text-lg font-semibold border-b-2 border-primary">
+            <Link
+              href="/blogs"
+              className="text-lg font-semibold border-b-2 border-green-700"
+            >
               Blogs
             </Link>
-            <Button className='text-md'>Join Us</Button>
+            <Button className="text-md">Join Us</Button>
           </nav>
         </div>
       </header>
@@ -93,8 +100,12 @@ export default function BlogPage() {
                                 </Badge>
                               ))}
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">{article.title}</h3>
-                            <p className="text-muted-foreground">{article.excerpt}</p>
+                            <h3 className="text-2xl font-bold mb-2">
+                              {article.title}
+                            </h3>
+                            <p className="text-muted-foreground">
+                              {article.excerpt}
+                            </p>
                           </div>
                         </CardContent>
                       </Card>
@@ -128,7 +139,9 @@ export default function BlogPage() {
                       </div>
                       <div className="p-4">
                         <h3 className="font-semibold mb-2">{post.title}</h3>
-                        <p className="text-sm text-muted-foreground">{post.excerpt}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {post.excerpt}
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -148,11 +161,15 @@ export default function BlogPage() {
               <div className="space-y-4">
                 {latestBlogs.map((blog, index) => (
                   <article key={index} className="space-y-1">
-                    <time className="text-sm text-muted-foreground">{blog.date}</time>
+                    <time className="text-sm text-muted-foreground">
+                      {blog.date}
+                    </time>
                     <h3 className="font-medium hover:underline">
                       <Link href="#">{blog.title}</Link>
                     </h3>
-                    <p className="text-sm text-muted-foreground">{blog.excerpt}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {blog.excerpt}
+                    </p>
                   </article>
                 ))}
               </div>
@@ -162,17 +179,19 @@ export default function BlogPage() {
       </div>
 
       {/* Follow Section */}
-      <section className="bg-blue-50 py-16 px-10">
+      <section className="py-16 px-10">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Follow Google for Developers</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Follow Google for Developers
+          </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {socialLinks.map((social, index) => (
-              <Card key={index} className="bg-white">
+              <Card key={index}>
                 <CardContent className="p-6">
-                  <div className="mb-4">
-                    {social.icon}
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">{social.description}</p>
+                  <div className="mb-4">{social.icon}</div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {social.description}
+                  </p>
                   <Button variant="outline" size="sm">
                     {social.buttonText}
                   </Button>
@@ -183,19 +202,20 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 const featuredArticles = [
   {
     title: "Introducing Android XR SDK Developer Preview",
-    excerpt: "The Android XR SDK, a new platform for building extended reality (XR) experiences on Android, is now available for devs to try.",
+    excerpt:
+      "The Android XR SDK, a new platform for building extended reality (XR) experiences on Android, is now available for devs to try.",
     image: "/placeholder.svg?height=400&width=800",
     tags: ["ANDROID", "AR", "AI"],
-    href: "#"
+    href: "#",
   },
   // Add more featured articles...
-]
+];
 
 const categories = [
   {
@@ -204,19 +224,19 @@ const categories = [
       {
         title: "Google AI Developers Community Spotlight Contest",
         excerpt: "Join our contest and showcase your AI innovations",
-        image: "/placeholder.svg?height=200&width=400"
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "Gemini 2.0: Level Up Your Apps",
         excerpt: "Explore real-time multimodal interactions",
-        image: "/placeholder.svg?height=200&width=400"
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "See the Similarity: Visual Search",
         excerpt: "Implementing visual search with embeddings",
-        image: "/placeholder.svg?height=200&width=400"
-      }
-    ]
+        image: "/placeholder.svg?height=200&width=400",
+      },
+    ],
   },
   {
     title: "Mobile",
@@ -224,60 +244,66 @@ const categories = [
       {
         title: "Celebrating Flutter's Production Era",
         excerpt: "What's new in Flutter development",
-        image: "/placeholder.svg?height=200&width=400"
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "Firebase Demo Day '24",
         excerpt: "Build and run AI powered apps",
-        image: "/placeholder.svg?height=200&width=400"
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "TensorFlow Lite is now LiteRT",
         excerpt: "Exploring the new TensorFlow Lite",
-        image: "/placeholder.svg?height=200&width=400"
-      }
-    ]
-  }
-]
+        image: "/placeholder.svg?height=200&width=400",
+      },
+    ],
+  },
+];
 
 const latestBlogs = [
   {
     date: "JAN 08, 2025",
     title: "Google AI Developers Community Spotlight Contest",
-    excerpt: "The Google AI Developers Community Spotlight Contest is seeking innovative, diverse projects using Google's AI tools..."
+    excerpt:
+      "The Google AI Developers Community Spotlight Contest is seeking innovative, diverse projects using Google's AI tools...",
   },
   {
     date: "JAN 07, 2025",
     title: "Building a better smart home",
-    excerpt: "The public beta launch of Home APIs for Android allows developers to create better smart home experiences..."
+    excerpt:
+      "The public beta launch of Home APIs for Android allows developers to create better smart home experiences...",
   },
   {
     date: "JAN 07, 2025",
     title: "Build the future of home with Google Home APIs",
-    excerpt: "The Google Home APIs are now in public developer beta for Android..."
-  }
-]
+    excerpt:
+      "The Google Home APIs are now in public developer beta for Android...",
+  },
+];
 
 const socialLinks = [
   {
     icon: <div className="w-8 h-8 bg-red-600 rounded-full" />,
-    description: "Subscribe to join a community of creative developers and learn the latest in Google technology.",
-    buttonText: "Learn more"
+    description:
+      "Subscribe to join a community of creative developers and learn the latest in Google technology.",
+    buttonText: "Learn more",
   },
   {
     icon: <div className="w-8 h-8 bg-pink-500 rounded-full" />,
-    description: "Follow and discover developer resources, community events, and inspirational stories.",
-    buttonText: "Learn more"
+    description:
+      "Follow and discover developer resources, community events, and inspirational stories.",
+    buttonText: "Learn more",
   },
   {
     icon: <div className="w-8 h-8 bg-blue-600 rounded-full" />,
-    description: "Join a community of creative developers and learn how to use the latest in technology.",
-    buttonText: "Learn more"
+    description:
+      "Join a community of creative developers and learn how to use the latest in technology.",
+    buttonText: "Learn more",
   },
   {
     icon: <div className="w-8 h-8 bg-gray-600 rounded-full" />,
-    description: "Subscribe to Google for Developers news. Your information will be used in accordance with Google's privacy policy.",
-    buttonText: "Subscribe"
-  }
-]
-
+    description:
+      "Subscribe to Google for Developers news. Your information will be used in accordance with Google's privacy policy.",
+    buttonText: "Subscribe",
+  },
+];
