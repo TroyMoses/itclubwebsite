@@ -119,7 +119,7 @@ export default function HomePage() {
         <section className="py-20 px-10">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
-              About the communities
+              abut the communities
             </h2>
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className=" border-none">

@@ -7,8 +7,7 @@ Open your powerShell with Admin Previleges
 Run "Get-ExecutionPolicy" check if the result is "Restricted" or "RemoteSigned"
 if its "Restricted" then Run "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned"
 
-
-Now, run the development server;
+Run the development server;
 
 ```bash
 npm run dev
