@@ -62,7 +62,7 @@ export default function HomePage() {
             >
               Home
             </Link>
-            <Link href="#" className="text-lg font-normal">
+            <Link href="/event" className="text-lg font-normal">
               Events
             </Link>
             <Link href="#" className="text-lg font-normal">
