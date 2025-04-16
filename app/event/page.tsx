@@ -302,7 +302,7 @@ export default function Events() {
           </div>
           <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-gray-500">
-              © 2025 IT Club Bugema Main Campus. All rights reserved.
+              © 2025 IT Club Bugema Main Campus. All rights reserved..
             </p>
           </div>
         </div>
