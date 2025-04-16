@@ -79,9 +79,9 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main className="flex-1 ">
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className=" pt-10 pb-20 px-10">
+        <section className="pt-10 pb-16 px-10">
           <div className="container">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
@@ -116,7 +116,7 @@ export default function HomePage() {
         </section>
 
         {/* About Communities Section */}
-        <section className="py-20 px-10">
+        <section className="py-16 px-10">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
               abut the communities
@@ -152,7 +152,7 @@ export default function HomePage() {
         </section>
 
         {/* Programs Section */}
-        <section className="py-20  px-10">
+        <section className="py-16 px-10">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
               Additional communities and programs
@@ -188,7 +188,7 @@ export default function HomePage() {
         </section>
 
         {/* Leadership Section */}
-        <section className="py-20 px-10">
+        <section className="py-16 px-10">
           <div className="container">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
@@ -217,7 +217,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t py-12 px-10">
+      <footer className="border-t py-8 px-10">
         <div className="container">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             <div>
