@@ -12,7 +12,6 @@ import {
   staggeredContainerVariants, 
   buttonVariants,
   sectionVariants,
-  floatingVariants
 } from '@/lib/animations';
 
 // Sample event data
