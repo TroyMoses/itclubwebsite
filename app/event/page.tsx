@@ -147,6 +147,7 @@ export default function Events() {
                 whileTap="tap"
               >
                 <Button
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   onClick={() => setFilter(filterOption as any)}
                   variant={filter === filterOption ? 'default' : 'outline'}
                   className="px-6 relative overflow-hidden"
