@@ -2,7 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+download and install NodeJs from https://nodejs.org/en
+Open your powerShell with Admin Previleges
+Run "Get-ExecutionPolicy" check if the result is "Restricted" or "RemoteSigned"
+if its "Restricted" then Run "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned"
+
+Run the development server
 
 ```bash
 npm run dev
