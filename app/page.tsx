@@ -1,6 +1,5 @@
 import { Globe, Users } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -40,58 +39,24 @@ const programs = [
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            {/* <Image
-              src="/medialogo.png"
-              alt="GDSC Logo"
-              width={32}
-              height={32}
-              className="h-8 w-16"
-            /> */}
-            <span className="text-2xl">
-              IT - CLUB BUGEMA MAIN CAMPUS
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className="text-lg border-b-2 border-green-700"
-            >
-              Home
-            </Link>
-            <Link href="/event" className="text-lg font-normal">
-              Events
-            </Link>
-            <Link href="#" className="text-lg font-normal">
-              Projects
-            </Link>
-            <Link href="#" className="text-lg font-normal">
-              Team
-            </Link>
-            <Link href="/blogs" className="text-lg font-normal">
-              Blogs
-            </Link>
-            <Button variant="default">Join Us</Button>
-          </nav>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="pt-10 pb-16 px-10">
+        <section className="pt-10 pb-10 px-10">
           <div className="container">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Join the Developer Community
+                <h1 className="text-4xl text-white/80 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Bugema IT Club
                 </h1>
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none">
+                  <span className="text-green-700">Innovate.</span>{" "}
+                  <span className="text-green-500 italic">Learn.</span>{" "}
+                  <span className="text-white/80">Connect</span>
+                </h2>
                 <p className="text-gray-500 md:text-xl">
-                  Tap into a global network of developers passionate about
-                  Google technologies. Find your local Google Developer Group
-                  and start connecting!
+                  Join Bugema University{"'"}s leading IT community. Explore
+                  cutting-edge technologies, collaborate on exciting projects,
+                  and build lasting connections with fellow tech minds.
                 </p>
                 <div className="flex flex-col gap-3 min-[400px]:flex-row">
                   <Button variant="default" size="lg">
@@ -115,17 +80,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Communities Section */}
-        <section className="py-16 px-10">
+        {/* About Clubs Section */}
+        <section className="py-10 px-10">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
-              abut the communities
+            <h2 className="text-3xl text-white/80 font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+              Our Different Clubs
             </h2>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <Card className=" border-none">
+            <div className="flex justify-center items-center gap-6">
+              <Card className="border-none">
                 <CardHeader>
-                  <Users className="h-12 w-12 text-pink-500" />
-                  <CardTitle>Google Developer Groups</CardTitle>
+                  <Users className="h-12 w-12 mb-4 mt-2 text-pink-500" />
+                  <CardTitle className="text-xl text-white/80">
+                    Google Developer Students Club {"("}GDSC{")"}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-500">
@@ -137,8 +104,10 @@ export default function HomePage() {
               </Card>
               <Card className=" border-none">
                 <CardHeader>
-                  <Globe className="h-12 w-12 text-green-500" />
-                  <CardTitle>Google Developer Groups on Campus</CardTitle>
+                  <Globe className="h-12 w-12 mb-4 text-green-500" />
+                  <CardTitle className="text-xl text-white/80">
+                    Nethub
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-500">
@@ -152,7 +121,7 @@ export default function HomePage() {
         </section>
 
         {/* Programs Section */}
-        <section className="py-16 px-10">
+        <section className="py-10 px-10">
           <div className="container">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">
               Additional communities and programs
@@ -192,15 +161,19 @@ export default function HomePage() {
           <div className="container">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Become a leader in your local developer community
+                <h1 className="text-3xl text-white/80 font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Become a Club Leader
+                </h1>
+                <h2 className="text-xl text-green-600 font-bold tracking-tighter sm:text-2xl md:text-3xl">
+                  Shape the Future of Tech at Bugema
                 </h2>
                 <p className="text-gray-500">
-                  Lead a Google Developer Group (GDG) and empower your local
-                  developer community. Check if a chapter already exists in your
-                  city or campus, and get involved!
+                  Want to make a real impact on our IT community? Lead
+                  initiatives, organize events, and inspire your fellow
+                  students. This is your chance to develop your leadership
+                  skills and help the Bugema IT Club reach new heights.
                 </p>
-                <Button size="lg">Lead a GDG</Button>
+                <Button size="lg">Explore Leader Roles</Button>
               </div>
               <div className="relative h-[350px] overflow-hidden rounded-xl">
                 <Image
@@ -215,122 +188,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="border-t py-8 px-10">
-        <div className="container">
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Connect</h3>
-              <nav className="flex flex-col gap-2">
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Instagram
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  LinkedIn
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  X (Twitter)
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  YouTube
-                </Link>
-              </nav>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Programs</h3>
-              <nav className="flex flex-col gap-2">
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Women Techmakers
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Google Developer Groups
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Google Developer Experts
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Accelerators
-                </Link>
-              </nav>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">
-                Developer Resources
-              </h3>
-              <nav className="flex flex-col gap-2">
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Google API Console
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Google Cloud Console
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900"
-                >
-                  Firebase Console
-                </Link>
-              </nav>
-            </div>
-          </div>
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-gray-500">
-              © 2024 Google Developer Student Clubs. All rights reserved.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-sm text-gray-500 hover:text-gray-900"
-              >
-                Terms
-              </Link>
-              <Link
-                href="#"
-                className="text-sm text-gray-500 hover:text-gray-900"
-              >
-                Privacy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import {
   Carousel,
   CarouselContent,
@@ -12,71 +11,30 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Search Header */}
-      {/* <div className="border-b">
-        <div className="container py-4 px-10">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+      <div className="container py-4 px-10 mt-5">
+        <div className="flex items-center justify-start gap-8">
+          <div className="flex items-center justify-center gap-4">
+            <Search className="h-8 w-8 text-muted-foreground" />
             <Input
               placeholder="Search all articles..."
               className="pl-10 w-full md:max-w-xl"
             />
-            <Button className="absolute right-1 top-1/2 -translate-y-1/2">
-              Search
-            </Button>
           </div>
+          <Button>Search</Button>
         </div>
-      </div> */}
-      <header className="sticky top-0 z-50 w-full border-b bg-green-700 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            {/* <Image
-              src="/medialogo.png"
-              alt="GDSC Logo"
-              width={32}
-              height={32}
-              className="h-8 w-16"
-            /> */}
-            <Search className="h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              placeholder="Search all articles..."
-              className="pl-10 w-full md:max-w-xl"
-            />
-            <Button className="">Search</Button>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-lg font-normal">
-              Home
-            </Link>
-            <Link href="#" className="text-lg font-normal">
-              Events
-            </Link>
-            <Link href="#" className="text-lg font-normal">
-              Projects
-            </Link>
-            <Link href="#" className="text-lg font-normal">
-              Team
-            </Link>
-            <Link
-              href="/blogs"
-              className="text-lg font-semibold border-b-2 border-green-700"
-            >
-              Blogs
-            </Link>
-            <Button className="text-md">Join Us</Button>
-          </nav>
-        </div>
-      </header>
+      </div>
 
       <div className="container py-8 grid gap-8 lg:grid-cols-[1fr_300px]">
         <main>
           {/* Featured Articles */}
           <section className="mb-12 px-10">
-            <h2 className="text-2xl font-bold mb-6">Featured articles</h2>
+            <h2 className="text-2xl text-white/80 font-bold mb-6">Featured articles</h2>
             <Carousel className="w-full">
               <CarouselContent>
                 {featuredArticles.map((article, index) => (
@@ -100,7 +58,7 @@ export default function BlogPage() {
                                 </Badge>
                               ))}
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">
+                            <h3 className="text-2xl text-white/80 font-bold mb-2">
                               {article.title}
                             </h3>
                             <p className="text-muted-foreground">
@@ -122,7 +80,7 @@ export default function BlogPage() {
           {categories.map((category) => (
             <section key={category.title} className="mb-12 px-10">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">{category.title}</h2>
+                <h2 className="text-2xl text-white/80 font-bold">{category.title}</h2>
                 <Button variant="link">See posts →</Button>
               </div>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -138,7 +96,7 @@ export default function BlogPage() {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="font-semibold mb-2">{post.title}</h3>
+                        <h3 className="text-white/80 font-semibold mb-2">{post.title}</h3>
                         <p className="text-sm text-muted-foreground">
                           {post.excerpt}
                         </p>
@@ -155,7 +113,7 @@ export default function BlogPage() {
         <aside>
           <Card>
             <CardHeader>
-              <CardTitle>Latest blogs</CardTitle>
+              <CardTitle className="text-white/80">Latest blogs</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -181,7 +139,7 @@ export default function BlogPage() {
       {/* Follow Section */}
       <section className="py-16 px-10">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl text-white/80 font-bold text-center mb-12">
             Follow Google for Developers
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
